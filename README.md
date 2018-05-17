@@ -16,9 +16,9 @@
 
 ✅ 達成 Zero Dependencies
 
-✅ 達成 Minimum singletons
+✅ 達成 Minimum Singletons
 
-✅ 達成 Highly testable code
+✅ 達成 Highly Testable Code
 
 主題為 Networking：發送 Restful API 請求，回傳資料呈現在 UI 上。
 
