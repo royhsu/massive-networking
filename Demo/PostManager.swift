@@ -12,6 +12,10 @@ import Foundation
 
 class PostManager: PostProvider {
     
+    let session: URLSession
+    
+    init(session: URLSession = .shared) { self.session = session }
+    
     enum FetchPostError: Error {
         
         case noData
@@ -25,7 +29,7 @@ class PostManager: PostProvider {
         
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts/\(id)")!
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { data, response, error in
             
             if let error = error {
                 
