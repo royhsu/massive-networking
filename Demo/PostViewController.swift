@@ -123,13 +123,13 @@ class PostViewController: UIViewController {
             preferredStyle: .alert
         )
         
-        alertController.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: .cancel,
-                handler: nil
-            )
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .cancel,
+            handler: nil
         )
+        
+        alertController.addAction(okAction)
         
         present(
             alertController,
