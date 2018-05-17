@@ -11,13 +11,15 @@
 import UIKit
 
 @UIApplicationMain
-public final class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    // MARK: Property
-
+public final class AppDelegate: UIResponder {
+    
     public final let window = UIWindow(frame: UIScreen.main.bounds)
+    
+}
 
-    // MARK: UIApplicationDelegate
+// MARK: UIApplicationDelegate
+
+extension AppDelegate: UIApplicationDelegate {
 
     public final func application(
         _ application: UIApplication,
