@@ -25,6 +25,27 @@ extension AppDelegate: UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
     )
-    -> Bool { return true }
+    -> Bool {
+        
+        let window = UIWindow()
+        
+        let storyboard = UIStoryboard(
+            name: "Main",
+            bundle: nil
+        )
+        
+        let postViewController = storyboard.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        
+        postViewController.postProvider = PostManager()
+        
+        window.rootViewController = postViewController
+        
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
+        return true
+        
+    }
 
 }

@@ -18,100 +18,31 @@ class PostViewController: UIViewController {
     @IBOutlet
     weak var bodyLabel: UILabel!
     
+    var postProvider: PostProvider?
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()
         
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1")!
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        postProvider?.fetchPost(id: "1") { result in
             
-            if let error = error {
+            DispatchQueue.main.async {
                 
-                DispatchQueue.main.async {
-                
-                    self.showAlert(message: error.localizedDescription)
+                switch result {
                     
-                }
-                
-                return
-                
-            }
-            
-            guard
-                let data = data
-            else {
-                
-                DispatchQueue.main.async {
-                
-                    self.showAlert(message: "No data.")
+                case let .success(post):
                     
-                }
-                
-                return
-                
-            }
-            
-            do {
-                
-                let json = try JSONSerialization.jsonObject(with: data)
-                
-                guard
-                    let jsonObject = json as? [String: Any]
-                else {
+                    self.titleLabel.text = post.title
                     
-                    DispatchQueue.main.async {
+                    self.bodyLabel.text = post.body
                     
-                        self.showAlert(message: "Not json object.")
-                    
-                    }
-                    
-                    return
-                    
-                }
-                
-                guard
-                    let title = jsonObject["title"] as? String
-                else {
-                    
-                    DispatchQueue.main.async {
-                    
-                        self.showAlert(message: "Missing value for key title.")
-                    
-                    }
-                    
-                    return
-                        
-                }
-                
-                guard
-                    let body = jsonObject["body"] as? String
-                else {
-                    
-                    DispatchQueue.main.async {
-                    
-                        self.showAlert(message: "Missing value for key body.")
-                        
-                    }
-                    
-                    return
-                        
-                }
-                
-                DispatchQueue.main.async {
-                    
-                    self.titleLabel.text = title
-                    
-                    self.bodyLabel.text = body
+                case let .failure(error): self.showAlert(message: error.localizedDescription)
                     
                 }
                 
             }
-            catch { self.showAlert(message: error.localizedDescription) }
             
         }
-        
-        task.resume()
 
     }
     

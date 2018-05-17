@@ -12,6 +12,12 @@
 		B0FF04D420AD1902003111E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0FF04D320AD1902003111E5 /* Assets.xcassets */; };
 		B0FF04D720AD1902003111E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FF04D520AD1902003111E5 /* LaunchScreen.storyboard */; };
 		B0FF04DF20AD294F003111E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FF04DE20AD294F003111E5 /* Main.storyboard */; };
+		B0FF04E120AD2E0E003111E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04E020AD2E0E003111E5 /* Post.swift */; };
+		B0FF04E320AD3056003111E5 /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04E220AD3056003111E5 /* JSONError.swift */; };
+		B0FF04E520AD30DC003111E5 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04E420AD30DC003111E5 /* JSONObject.swift */; };
+		B0FF04E720AD39D7003111E5 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04E620AD39D7003111E5 /* PostManager.swift */; };
+		B0FF04E920AD3ADF003111E5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04E820AD3ADF003111E5 /* Result.swift */; };
+		B0FF04EB20AD40C2003111E5 /* PostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF04EA20AD40C2003111E5 /* PostProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		B0FF04D620AD1902003111E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0FF04D820AD1902003111E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0FF04DE20AD294F003111E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B0FF04E020AD2E0E003111E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B0FF04E220AD3056003111E5 /* JSONError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
+		B0FF04E420AD30DC003111E5 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		B0FF04E620AD39D7003111E5 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		B0FF04E820AD3ADF003111E5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B0FF04EA20AD40C2003111E5 /* PostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 			children = (
 				B0FF04CF20AD1902003111E5 /* AppDelegate.swift */,
 				B0FF04D120AD1902003111E5 /* PostViewController.swift */,
+				B0FF04E020AD2E0E003111E5 /* Post.swift */,
+				B0FF04EA20AD40C2003111E5 /* PostProvider.swift */,
+				B0FF04E620AD39D7003111E5 /* PostManager.swift */,
+				B0FF04E820AD3ADF003111E5 /* Result.swift */,
+				B0FF04E220AD3056003111E5 /* JSONError.swift */,
+				B0FF04E420AD30DC003111E5 /* JSONObject.swift */,
 				B0FF04DE20AD294F003111E5 /* Main.storyboard */,
 				B0FF04D320AD1902003111E5 /* Assets.xcassets */,
 				B0FF04D520AD1902003111E5 /* LaunchScreen.storyboard */,
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FF04E120AD2E0E003111E5 /* Post.swift in Sources */,
 				B0FF04D220AD1902003111E5 /* PostViewController.swift in Sources */,
+				B0FF04E320AD3056003111E5 /* JSONError.swift in Sources */,
 				B0FF04D020AD1902003111E5 /* AppDelegate.swift in Sources */,
+				B0FF04E920AD3ADF003111E5 /* Result.swift in Sources */,
+				B0FF04E520AD30DC003111E5 /* JSONObject.swift in Sources */,
+				B0FF04EB20AD40C2003111E5 /* PostProvider.swift in Sources */,
+				B0FF04E720AD39D7003111E5 /* PostManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

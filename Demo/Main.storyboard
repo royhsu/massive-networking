@@ -13,7 +13,7 @@
         <!--Post View Controller-->
         <scene sceneID="mqc-8P-d98">
             <objects>
-                <viewController id="QxM-pm-nfm" customClass="PostViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostViewController" id="QxM-pm-nfm" customClass="PostViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQ9-un-Q0o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
