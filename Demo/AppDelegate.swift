@@ -11,9 +11,9 @@
 import UIKit
 
 @UIApplicationMain
-public final class AppDelegate: UIResponder {
+class AppDelegate: UIResponder {
     
-    public final let window = UIWindow(frame: UIScreen.main.bounds)
+    var window: UIWindow?
     
 }
 
@@ -21,20 +21,10 @@ public final class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
 
-    public final func application(
+    func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
     )
-    -> Bool {
-
-        window.rootViewController = UINavigationController(
-            rootViewController: ViewController()
-        )
-
-        window.makeKeyAndVisible()
-
-        return true
-
-    }
+    -> Bool { return true }
 
 }
