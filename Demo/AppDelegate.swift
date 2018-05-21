@@ -17,7 +17,7 @@ class AppDelegate: UIResponder {
     
 }
 
-// MARK: UIApplicationDelegate
+// MARK: - UIApplicationDelegate
 
 extension AppDelegate: UIApplicationDelegate {
 
